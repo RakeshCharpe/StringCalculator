@@ -9,7 +9,7 @@ public class StringCalculator {
         if (numbers.isEmpty())
             return 0;
         
-            
+
         String delimiter = "[,\n]";
     if (numbers.startsWith("//")) {
         int delimiterEnd = numbers.indexOf("\n");
@@ -22,12 +22,13 @@ public class StringCalculator {
     int sum = 0;
 
     for (String num : parts) {
-        if (num.isEmpty()) continue;
-        int n = Integer.parseInt(num);
-        if (n < 0) {
-            negatives.add(n);
-        }
+       if (num.isEmpty()) continue;
+    int n = Integer.parseInt(num);
+    if (n < 0) {
+        negatives.add(n);
+    } else if (n <= 1000) { // ignore >1000
         sum += n;
+    }
     }
 
     if (!negatives.isEmpty()) {

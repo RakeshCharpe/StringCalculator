@@ -53,6 +53,12 @@ class StringCalculatorApplicationTests {
     });
     assertEquals("negatives not allowed: -2,-4", ex.getMessage());
 }
+@Test
+void testNumbersGreaterThan1000Ignored() {
+    StringCalculator calc = new StringCalculator();
+    assertEquals(2, calc.Add("2,1001"));
+    assertEquals(1002, calc.Add("2,1000"));
+}
 
 
 }
