@@ -26,5 +26,11 @@ class StringCalculatorApplicationTests {
 		assertEquals(7, calc.Add("3,4"));
 	}
 	
+	@Test
+	void testMultipleNumbersReturnSum() {
+    StringCalculator calc = new StringCalculator();
+    assertEquals(6, calc.Add("1,2,3"));
+    assertEquals(10, calc.Add("1,2,3,4"));
+}
 
 }
