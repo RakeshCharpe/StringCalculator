@@ -19,6 +19,12 @@ class StringCalculatorApplicationTests {
 		assertEquals(1, calc.Add("1"));
 		assertEquals(5, calc.Add("5"));
 	}
-
+	@Test
+	void testTwoNumbersReturnSum() {
+		StringCalculator calc = new StringCalculator();
+		assertEquals(3, calc.Add("1,2"));
+		assertEquals(7, calc.Add("3,4"));
+	}
+	
 
 }
